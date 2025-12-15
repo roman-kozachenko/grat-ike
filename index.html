@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Explicitly mark page as non-indexed to reduce phishing heuristics -->
+        <meta name="robots" content="noindex,nofollow" />
+
+        <title>Wesołych Świąt</title>
+
+        <style>
+            /* --- IKEA brand colors --- */
+            :root {
+                --ikea-blue: #0058a3;
+                --ikea-yellow: #ffcc00;
+                --bg: #f2f4f7;
+                --card-bg: #ffffff;
+                --text-dark: #111;
+                --text-muted: #666;
+            }
+
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Arial, sans-serif;
+                background: var(--bg);
+                color: var(--text-dark);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .wrap {
+                max-width: 920px;
+                margin: 36px auto;
+                padding: 16px;
+            }
+
+            .card {
+                background: var(--card-bg);
+                border-radius: 14px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .photo {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                padding: 26px;
+            }
+
+            .logo {
+                width: 140px;
+                display: block;
+                margin-bottom: 16px;
+            }
+
+            h1 {
+                margin: 0 0 16px 0;
+                font-size: clamp(22px, 3.6vw, 30px);
+                font-weight: 700;
+                line-height: 1.25;
+            }
+
+            .badge {
+                display: inline-block;
+                background: var(--ikea-blue);
+                color: white;
+                padding: 6px 14px;
+                font-size: 13px;
+                border-radius: 30px;
+                border: 2px solid var(--ikea-yellow);
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 12px;
+            }
+
+            p.lead {
+                margin: 0 0 18px 0;
+                font-size: clamp(15px, 2vw, 18px);
+                line-height: 1.5;
+            }
+
+            .department {
+                display: inline-block;
+                background: var(--ikea-blue);
+                color: white;
+                padding: 10px 16px;
+                border-radius: 10px;
+                font-weight: 600;
+                margin-top: 6px;
+            }
+
+            .disclaimer {
+                margin-top: 22px;
+                font-size: 13px;
+                color: var(--text-muted);
+                line-height: 1.4;
+            }
+
+            @media (max-width: 680px) {
+                .wrap {
+                    margin: 18px 12px;
+                }
+                .content {
+                    padding: 18px;
+                }
+                .logo {
+                    width: 120px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <article class="card" aria-label="Życzenia świąteczne od zespołu">
+                <img src="team.jpg" alt="Zdjęcie zespołu" class="photo" />
+
+                <div class="content">
+                    <img src="./logo.png" alt="IKEA Logo" class="logo" />
+
+                    <span class="badge">Wesołych Świąt</span>
+
+                    <h1>
+                        Cieszymy się, że możemy z Wami współpracować — to dla
+                        nas naprawdę ważne.
+                    </h1>
+
+                    <p class="lead">
+                        Dziękujemy za wspólną pracę i życzymy spokojnych,
+                        radosnych Świąt oraz wszystkiego dobrego w nadchodzącym
+                        roku.
+                    </p>
+
+                    <div class="department">Dział Kas</div>
+
+                    <!-- Explicit anti-phishing / anti-social-engineering signal -->
+                    <p class="disclaimer">
+                        This is a static corporate greeting page. No data is
+                        collected, no forms, no login, no scripts, no downloads.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </body>
+</html>
